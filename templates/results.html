@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database results</title>
+    </head>
+    <body>
+        <h1>
+            These are the results of your Database.
+        </h1>
+        <table border =1>
+            <thead>
+                <td>Name</td>
+                <td>Address</td>
+                <td>City</td>
+                <td>Zip</td>
+            </thead>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row["name"] }}</td>
+                <td>{{ row["addr"] }}</td>
+                <td>{{ row["city"] }}</td>
+                <td>{{ row["zip"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href = "/>" Back to Home </a>
+    </body>
+</html>
